@@ -1,18 +1,21 @@
 import React from 'react'
-import {HashRouter as Router, Route} from 'react-router-dom'
+import { HashRouter as Router, Route } from 'react-router-dom'
 
+import request from 'superagent'
 import Home from './Home'
 import Date from './Date'
-import Result from './Result'
+import LoveResult from './LoveResult'
 
 class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      fname: '',
-      sname: '',
-      percentage: '',
-      result: ''
+      loveObj: {
+        fname: '',
+        sname: '',
+        percentage: '',
+        result: ''
+      }
     }
     this.handleChange = this.handleChange.bind(this)
     this.homeCallback = this.homeCallback.bind(this)
@@ -24,22 +27,27 @@ class App extends React.Component {
     })
   }
 
-  homeCallback (fname, sname, percentage, result) {
-    this.setState({
-      fname: fname,
-      sname: sname,
-      percentage: percentage,
-      result: result
-    })
+  homeCallback (fname, sname) {
+    console.log(fname, sname)
+    request
+      .get(`https://love-calculator.p.mashape.com/getPercentage?fname=${fname}&sname=${sname}`)
+      .set('X-Mashape-Key', 'pFxXBOWpOcmshn2bxBavtOparZrQp12vpZajsnxjT7EXRmViHZ')
+      .set('Accept', 'application/json')
+      .then(res => {
+        console.log(res.body)
+        this.setState({
+          loveObj: res.body
+        })
+      })
   }
+
   render () {
     return (
       <Router>
         <div>
-          <h1>Love Calculator</h1>
-          <Route exact path='/' render={() => <Home callback={this.homeCallback}/> }/>
+          <Route exact path='/' render={() => <Home callback={this.homeCallback} />} />
           <Route exact path='/date' render={() => <Date />} />
-          <Route exact path='/result' render={() => <Result/>} />
+          <Route path='/result' result={this.state.loveObj} render={() => <LoveResult data={this.state.loveObj} />} />
         </div>
       </Router>
     )
