@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import _ from 'lodash'
 
 import locationData from './location.js'
 import activityData from './activity.js'
