@@ -1,12 +1,19 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
+// import data 1, 2, 3
 
 class Date extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      date: null
+      location: [],
+      activity: [],
+      gift: []
     }
   }
+
+  // random fn 
 
   render () {
     return (
@@ -16,15 +23,14 @@ class Date extends React.Component {
         </div>
         <div>
           <h2>You are going to: </h2>
-          <div>{this.props.location}</div>
+          <div>{this.state.location}</div>
           <h2>Your Valentines Day activity is: </h2>
-          <div>{this.props.activity}</div>
+          <div>{this.state.activity}</div>
           <h2>You have bought this for your Valentine: </h2>
-          <div>{this.props.gift}</div>
+          <div>{this.state.gift}</div>
         </div>
         <div>
-          <button type='button'
-            onClick={Result}>Will it go well?</button>
+          <Link to='/result'><button type='button'>Will it go well?</button></Link>
         </div>
       </div>
     )
