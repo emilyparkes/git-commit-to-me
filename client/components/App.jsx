@@ -36,7 +36,6 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-          <h1>Love Calculator</h1>
           <Route exact path='/' render={() => <Home callback={this.homeCallback}/> }/>
           <Route exact path='/date' render={() => <Date />} />
           <Route exact path='/result' render={() => <Result/>} />
