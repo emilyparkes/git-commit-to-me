@@ -3,10 +3,11 @@ import React from 'react'
 const LoveResult = (props) => {
   return (
     <div>
-      <h3>{props.result.fname}</h3>
-      <h3>{props.result.sname}</h3>
-      <h3>{props.result.result}</h3>
-      <h3>{props.result.percentage}</h3>
+      <h1>text</h1>
+      <h3>{props.data.fname}</h3>
+      <h3>{props.data.sname}</h3>
+      <h3>{props.data.result}</h3>
+      <h3>{props.data.percentage}</h3>
     </div>
   )
 }
