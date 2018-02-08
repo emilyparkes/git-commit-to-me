@@ -1,7 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-// import data 1, 2, 3
+import locationData from './location.js'
+import activityData from './activity.js'
+import giftData from './gift.js'
 
 class Date extends React.Component {
   constructor (props) {
@@ -13,11 +15,21 @@ class Date extends React.Component {
     }
   }
 
-  // random fn 
+  randomiseLocation () {
+    return _.sample(locationData)
+  }
+
+  randomiseActivity () {
+    return _.sample(activityData)
+  }
+
+  randomiseGift () {
+    return _.sample(giftData)
+  }
 
   render () {
     return (
-      <div>
+      <div className='body'>
         <div>
           <h1>Welcome to your dream date</h1>
         </div>

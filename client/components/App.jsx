@@ -32,7 +32,6 @@ class App extends React.Component {
       result: result
     })
   }
-
   render () {
     return (
       <Router>
@@ -48,10 +47,3 @@ class App extends React.Component {
 }
 
 export default App
-
-// render () {
-//   return (
-//     <Date location={this.state.location} activity={this.state.activity} gift={this.state.gift} />
-//   )
-// }
-// }
