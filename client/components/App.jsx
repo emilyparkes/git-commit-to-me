@@ -28,13 +28,11 @@ class App extends React.Component {
   }
 
   homeCallback (fname, sname) {
-    console.log(fname, sname)
     request
       .get(`https://love-calculator.p.mashape.com/getPercentage?fname=${fname}&sname=${sname}`)
       .set('X-Mashape-Key', 'pFxXBOWpOcmshn2bxBavtOparZrQp12vpZajsnxjT7EXRmViHZ')
       .set('Accept', 'application/json')
       .then(res => {
-        console.log(res.body)
         this.setState({
           loveObj: res.body
         })
@@ -45,7 +43,7 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-          <Route exact path='/' render={() => <Home callback={this.homeCallback} />} />
+          <Route exact path='/' render={() => <Home callback={this.homeCallback}/> }/>
           <Route exact path='/date' render={() => <Date />} />
           <Route path='/result' result={this.state.loveObj} render={() => <LoveResult data={this.state.loveObj} />} />
         </div>
