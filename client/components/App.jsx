@@ -3,8 +3,9 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 
 import Home from './Home'
 import Date from './Date'
+import Result from './Result'
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -14,7 +15,7 @@ export default class App extends React.Component {
       result: ''
     }
     this.handleChange = this.handleChange.bind(this)
-    this.homeCallback = this.
+    this.homeCallback = this.homeCallback.bind(this)
   }
 
   handleChange (e) {
@@ -28,16 +29,15 @@ export default class App extends React.Component {
       fname: fname,
       sname: sname,
       percentage: percentage,
-      result: result,
+      result: result
     })
   }
-
   render () {
     return (
       <Router>
         <div>
           <h1>Love Calculator</h1>
-          <Route exact path='/' render={() => <Home callback={homeCallback}/> }/>
+          <Route exact path='/' render={() => <Home callback={this.homeCallback}/> }/>
           <Route exact path='/date' render={() => <Date />} />
           <Route exact path='/result' render={() => <Result/>} />
         </div>
@@ -45,3 +45,5 @@ export default class App extends React.Component {
     )
   }
 }
+
+export default App
