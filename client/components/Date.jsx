@@ -18,11 +18,11 @@ class Date extends React.Component {
         </div>
         <div>
           <h2>You are going to: </h2>
-          <div className='text'>{location}</div>
+          <img src={location} />
           <h2>Your Valentines Day activity is: </h2>
-          <div className='text'>{activity}</div>
+          <img src={activity}/>
           <h2>Recommended gift for your Valentine: </h2>
-          <div className='text'>{gift}</div>
+          <img src={gift}/>
         </div>
         <div>
           <Link to='/result'><button className='big-button' type='button'>Likelihood of a dream date?</button></Link>
