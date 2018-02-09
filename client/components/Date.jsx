@@ -25,7 +25,7 @@ class Date extends React.Component {
           <div className='text'>{gift}</div>
         </div>
         <div>
-          <Link to='/result'><button type='button'>Will it go well?</button></Link>
+          <Link to='/result'><button className='big-button' type='button'>Likelihood of a dream date?</button></Link>
         </div>
       </div>
     )

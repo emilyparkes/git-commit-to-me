@@ -11,7 +11,7 @@ h1.heading{
 text-align: center;
 font-size: 5em;
 font-family: 'Pacifico', cursive;
--webkit-text-stroke: 1px #645528;
+-webkit-text-stroke: 1.5px #353228;
 padding: 20px;
  }
 
@@ -47,6 +47,8 @@ h1{
 
 .text{
  font-size: 1.4em;
+ font-family: 'Bitter', serif;
+ color: #353535
 }
 
 
@@ -54,7 +56,7 @@ h1{
 
 button {
   background-color:rgb(243, 229, 231);
-  color: red;
+  color: rgb(253, 94, 94);
   margin: 15px;
   width: 100px;
   height: 65px;
@@ -72,6 +74,28 @@ border-width: 2px;
 border-radius: 25px;
 box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
+
+.big-button {
+  background-color:rgb(243, 229, 231);
+  color: rgb(253, 94, 94);
+  margin: 15px;
+  width: 120px;
+  height: 80px;
+border-style: solid;
+border-color: black;
+border-width: 1px;
+border-radius: 15px;
+box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+.big-button:hover {
+border-style: dotted;
+border-color:black;
+border-width: 2px;
+border-radius: 25px;
+box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
 
 input {
   background-color: rgb(243, 229, 231);

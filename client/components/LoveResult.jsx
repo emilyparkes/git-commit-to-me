@@ -4,10 +4,11 @@ const LoveResult = (props) => {
   return (
     <div className='body'>
       <h1>Your results:</h1>
-      <h3>{props.data.fname}</h3>
-      <h3>{props.data.sname}</h3>
-      <h3>{props.data.result}</h3>
-      <h3>{props.data.percentage}</h3>
+      <h3 className='text'>{props.data.fname}</h3>
+      <h2> and </h2>
+      <h3 className='text'>{props.data.sname}</h3>
+      <h2>{props.data.percentage} % compatibility </h2>
+      <h2>{props.data.result}</h2>
     </div>
   )
 }
