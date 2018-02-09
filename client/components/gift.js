@@ -1,13 +1,13 @@
 const gift = [
-  'Victoria\'s Secret',
-  'Grand Teddy Bear',
-  'Ropes',
-  'Fifty Shades Guidebook',
-  'Chocolate-covered Strawberries',
-  'Romantic Slack Message',
-  'Wine and Cheese',
-  'Red Roses',
-  'Tiffany and Co',
-  'Around the World Trip'
+  '/gift/VictoriasSecret.jpeg',
+  '/gift/GiantTeddy.jpeg',
+  '/gift/Rope.jpeg',
+  '/gift/FiftyShades.jpeg',
+  '/gift/ChocolateStrawberries.jpeg',
+  '/gift/SlackMessage.jpeg',
+  '/gift/WineCheese.jpeg',
+  '/gift/Roses.jpeg',
+  '/gift/TiffanyandCo.jpeg',
+  '/gift/AroundTheWorldTrip.jpeg'
 ]
 export default gift
