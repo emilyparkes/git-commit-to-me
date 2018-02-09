@@ -2,7 +2,7 @@ import React from 'react'
 
 const LoveResult = (props) => {
   return (
-    <div>
+    <div className='body'>
       <h1>Your results:</h1>
       <h3>{props.data.fname}</h3>
       <h3>{props.data.sname}</h3>

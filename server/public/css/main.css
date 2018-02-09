@@ -1,0 +1,88 @@
+body {
+  background: url(background.jpg);
+  background-size: 100%;
+  /* -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain; */
+
+}
+ 
+h1.heading{
+text-align: center;
+font-size: 5em;
+font-family: 'Pacifico', cursive;
+-webkit-text-stroke: 1px #645528;
+padding: 20px;
+ }
+
+.gold-text {
+  color:#c3a343;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(transparent, transparent),
+  url(https://st2.depositphotos.com/4072575/8081/i/950/depositphotos_80811736-stock-photo-background-filled-with-shiny-gold.jpg) repeat;
+  background: -o-linear-gradient(transparent, transparent);
+  -webkit-background-clip: text;
+
+}
+
+.body{
+text-align: center;
+padding: 20px;
+margin: 30px;
+
+}
+
+h2{
+  font-family: 'Pacifico', cursive;
+  margin: 20px;
+  padding: 20px;
+  color: rgb(58, 57, 57);
+}
+
+h1{
+  font-family: 'Pacifico', cursive;
+  color: rgb(59, 58, 58);
+
+}
+
+.text{
+ font-size: 1.4em;
+}
+
+
+
+
+button {
+  background-color:rgb(243, 229, 231);
+  color: red;
+  margin: 15px;
+  width: 100px;
+  height: 65px;
+border-style: solid;
+border-color: black;
+border-width: 1px;
+border-radius: 15px;
+box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+button:hover {
+border-style: dotted;
+border-color:black;
+border-width: 2px;
+border-radius: 25px;
+box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+input {
+  background-color: rgb(243, 229, 231);
+  color: red;
+  margin: 15px;
+  width: 250px;
+  height: 50px;
+border-style: solid;
+border-color: black;
+border-width: 1px;
+border-radius: 9px;
+box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+text-align: center;
+}
