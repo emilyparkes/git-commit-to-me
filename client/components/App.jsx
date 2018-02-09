@@ -42,7 +42,8 @@ class App extends React.Component {
   render () {
     return (
       <Router>
-        <div>
+        <div className='container'>
+          <h1 className='heading gold-text'>Git Commit To Me</h1>
           <Route exact path='/' render={() => <Home callback={this.homeCallback}/> }/>
           <Route exact path='/date' render={() => <Date />} />
           <Route path='/result' result={this.state.loveObj} render={() => <LoveResult data={this.state.loveObj} />} />
